@@ -1,0 +1,49 @@
+// mixins
+
+@mixin clearRow($nth) {
+	&:nth-child(#{$nth}+1) {
+		clear: both;
+	}
+}
+
+// Omega Reset
+@mixin omega-reset($nth, $columns) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($columns); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Vertical Align
+@mixin vertical-align {
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+
+@mixin proxima {
+	font-family: 'Proxima-Reg', sans-serif;
+	font-weight: 300;
+}
+@mixin bauer {
+	font-family: 'bauer', sans-serif;
+	font-weight: 700;
+}
+ @mixin proximaSemiBold {
+	 font-family: 'Proxima-Semibold', sans-serif;
+	 font-weight: 500;
+ }
+
+@mixin proximaBold {
+	font-family: 'Proxima-Bold', sans-serif;
+	font-weight: 700;
+}

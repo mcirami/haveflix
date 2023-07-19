@@ -1,0 +1,43 @@
+// typography baselines and @font face setups
+
+@font-face {
+    font-family: 'Proxima-Reg';
+    src: url('font/ProximaNova-Regular.eot'), url('font/ProximaNova-Regular.ttf') format('truetype'),url('font/ProximaNova-Regular.woff') format('woff'), url('font/ProximaNova-Regular.woff2') format('woff2'), url('font/ProximaNova-Regular.svg#latoreguler') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bauer';
+    src: url('font/bauerg-webfont.eot'), url('font/bauerg-webfont.ttf') format('truetype'),url('font/bauerg-webfont.woff') format('woff'), url('font/bauerg-webfont.woff2') format('woff2'), url('font/bauerg-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima-Semibold';
+    src: url('font/ProximaNova-Semibold.eot'), url('font/ProximaNova-Semibold.ttf') format('truetype'),url('font/ProximaNova-Semibold.woff') format('woff'), url('font/ProximaNova-Semibold.woff2') format('woff2'), url('font/ProximaNova-Semibold.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima-Bold';
+    src: url('font/ProximaNova-Bold.eot'), url('font/ProximaNova-Bold.ttf') format('truetype'),url('font/ProximaNova-Bold.woff') format('woff'), url('font/ProximaNova-Bold.woff2') format('woff2'), url('font/ProximaNova-Bold.svg#latobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*
+
+h1, h2, h4 {
+    @include latobold;
+}
+
+h3, p {
+    @include latoreg;
+}
+*/

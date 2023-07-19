@@ -1,0 +1,201 @@
+.navbar-toggler {
+    border: none;
+
+    img {
+        max-width: 40px;
+    }
+}
+
+.main-header-1 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    -webkit-transition: all ease-out .5s;
+    -moz-transition: all ease-out .5s;
+    -o-transition: all ease-out .5s;
+    transition: all ease-out .5s;
+    z-index: 2;
+    border-bottom: 1px solid #4d4b4b;
+    padding: 20px 0;
+
+    #navbarSupportedContent {
+
+        .navbar-nav {
+            align-items: center;
+        }
+
+        li {
+            &.nav-item {
+                margin-left:25px;
+            }
+
+            a {
+                @include proxima;
+                font-size:18px;
+                color: #9d9d9d;
+                transition: all 0.5s linear;
+                text-decoration: none;
+
+                &:hover {
+                    color:#e45300;
+                }
+
+                &.logout {
+                    color: $white;
+                    margin-right: 0;
+                }
+            }
+
+        }
+    }
+}
+
+.logo {
+    width: 150px;
+}
+
+.sticky-header {
+    position: fixed;
+    z-index: 100;
+    background: rgba(0,0,0,0.9);
+    box-shadow: 1px 3px 5px 0px rgb(136 136 136 / 75%);
+    -webkit-box-shadow: 1px 3px 5px 0px rgb(136 136 136 / 31%);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(136,136,136,0.75);
+    padding: 10px 0;
+}
+.main-header-1.sticky-header .logo img{
+    width:115px;
+}
+
+.sign-in-button {
+    text-align: right;
+}
+
+.sign-in-button a {
+    color: #f00;
+    font-size: 15px;
+    @include proxima;
+    background-color: #161616;
+    padding: 10px 27px;
+    border-radius: 5px;
+    border: 1px solid #363839;
+}
+.logo img{
+    -webkit-transition: all ease-out .5s;
+    -moz-transition: all ease-out .5s;
+    -o-transition: all ease-out .5s;
+    transition: all ease-out .5s;
+}
+
+nav#navbar_main {
+    padding-top: 0px;
+    padding-left: 0px;
+}
+.navbar {
+    float: right;
+    text-align: end !IMPORTANT;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+}
+.phone-no-with-login
+{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.phone-no-with-login h3
+{
+    color:#fff;
+    margin-right: 30px;
+    font-size: 25px;
+
+}
+.main-header-1.sticky-header .phone-no-with-login h3
+{
+    font-size:20px;
+}
+a.login-link
+{
+    background:#ea9401;
+    color:#fff;
+    border-radius:4px;
+    padding:7px 30px;
+    display:inline-block;
+    position: relative;
+}
+.login-link:hover
+{
+    color:#fff;
+}
+
+@media screen and (max-width: 992px) {
+    .main-header-1 {
+        #navbarSupportedContent {
+
+            ul {
+                text-align: left;
+                margin-bottom: 10px;
+            }
+
+            li {
+                &.nav-item {
+                    margin-left: 0;
+                }
+            }
+
+            .navbar-nav {
+                align-items: flex-start;
+            }
+        }
+    }
+
+
+}
+
+@media only screen and (max-width:767px) {
+    .main-header-1 {
+        #navbarSupportedContent {
+            .d-flex {
+                flex-wrap: wrap;
+
+                .button-create {
+                    width: 100%;
+                    padding: 10px 10px;
+                    color: #fff;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+
+                .button-sign {
+                    width: 100%;
+                    padding: 10px 10px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        width: 60%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu li {
+        display: inline;
+        padding: 0 2px;
+    }
+}
