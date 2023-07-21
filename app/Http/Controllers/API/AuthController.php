@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-class RegisterController extends BaseController
+class AuthController extends BaseController
 {
 
     /**
@@ -37,28 +37,31 @@ class RegisterController extends BaseController
      */
     public function register(Request $request): JsonResponse
     {
-        $content = $request->getContent();
+        //$content = $request->getContent();
+        $myRequestVars = $request->all();
+        $username = $request->user_name;
+        $myRequestVars['username'] = $username;
 
-        $validator = Validator::make($request->all(), [
+        $validator = Validator::make($myRequestVars, [
             'username' => 'required',
             'email' => 'required|email',
             'password' => 'required',
             'c_password' => 'required|same:password',
         ]);
 
-        return response()->json(['request' => $request->all()]);
+        //return response()->json(['request' => $request->all()]);
 
         if($validator->fails()){
             return $this->sendError('Validation Error.', $validator->errors());
         }
 
-        $input = $request->all();
+        $input = $myRequestVars;
         $input['password'] = bcrypt($input['password']);
         $user = User::create($input);
         $success['token'] =  $user->createToken('HaveFlix')->plainTextToken;
-        $success['username'] =  $user->username;
+        $success['username'] =  $input['username'] ;
 
-        return $this->sendResponse($success, 'User register successfully.');
+        return $this->sendResponse($success, 'User registered successfully.');
     }
 
     /**
@@ -68,7 +71,7 @@ class RegisterController extends BaseController
      */
     public function login(Request $request): JsonResponse
     {
-        //login token: 1|dYaGfEXbm5PZO52UL9CLInAKGxR5g1Jpy9eKax6r
+
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
             $user = Auth::user();
             $success['token'] =  $user->createToken('HaveFlix')->plainTextToken;
