@@ -102,6 +102,15 @@ class AuthController extends BaseController
             return $this->sendResponse("success", 'User updated.');
         }
 
+        if ($status == 0) {
+            $user = User::where('id', $userId)->firstOrFail();
+            $user->update([
+                'approved' => false,
+            ]);
+
+            return $this->sendResponse("success", 'User updated.');
+        }
+
         return $this->sendError($request->all());
     }
 

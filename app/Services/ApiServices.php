@@ -10,7 +10,7 @@ class ApiServices {
     public function postToBBR($user, $loginUrl) {
 
         $apiData = [
-            'userId'    => $user->id,
+            'x_userId'  => $user->id,
             'username'  => $user->username,
             'email'     => $user->email,
             'loginUrl'  => $loginUrl,
