@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -44,6 +45,20 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        $allRequests = $request->all();
+
+        if(isset($allRequests["username"])) {
+            $user = User::where('username', $allRequests["username"])->first();
+        }
+
+        if (isset($allRequests["email"])) {
+            $user = User::where('email', $allRequests["email"])->first();
+        }
+
+        if (!$user->approved) {
+            return abort(401);
+        }
+
         $request->authenticate();
 
         $request->session()->regenerate();
