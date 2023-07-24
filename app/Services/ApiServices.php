@@ -13,7 +13,7 @@ class ApiServices {
             'x_userId'  => $user->id,
             'username'  => $user->username,
             'email'     => $user->email,
-            'loginUrl'  => $loginUrl,
+            'x_loginUrl'  => $loginUrl,
         ];
         $apiURL = "https://joinsafelyonline.com/join/validate_offer?ofid=2130&";
         $headers = [
