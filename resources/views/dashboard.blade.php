@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :apiErrors="null">
 
     <x-slot name="header">
         @include('components.header-content')

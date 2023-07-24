@@ -4,15 +4,16 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use App\Services\ApiServices;
 
 class RegisteredUserController extends Controller
 {
@@ -29,10 +30,15 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request, ApiServices $apiServices)
     {
 
         Cookie::queue(Cookie::make('regFormSubmit', 'true', 30, null, null, null, false));
+
+        /*$apiErrors = ["status" => 0, "errors" => ["username" => ["That Username Is Not Available"],"email" => ["That Email Is Already In Use"]]];
+
+        session()->put('_old_input', ['username' => $user->username, 'email' => $user->email]);
+        return redirect('/')->with(["apiErrors" => $apiErrors['errors']]);*/
 
         $request->validate([
             'username' => ['required', 'string', 'min:4','max:255', 'unique:'.User::class],
@@ -48,10 +54,22 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        Auth::login($user);
+        //Auth::login($user);
 
-        Cookie::queue(Cookie::forget('regFormSubmit'));
+        $plaintext = Str::random(32);
+        $token = $user->loginTokens()->create([
+            'token' => hash('sha256', $plaintext),
+            'expires_at' => now()->addMinutes(15),
+        ]);
 
-        return redirect(RouteServiceProvider::HOME);
+        $url =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
+
+        Log::channel( 'api' )->info("login url: " . $url);
+
+        $apiServices->postToBBR($user, $url);
+
+        //Cookie::queue(Cookie::forget('regFormSubmit'));
+
+        //return redirect(RouteServiceProvider::HOME);
     }
 }

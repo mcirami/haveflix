@@ -43,7 +43,8 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen">
-            @include('components.video-join-modal')
+            {{--@include('components.video-join-modal')--}}
+            <x-video-join :apiErrors="$apiErrors" />
             @include('components.onesignal-modal')
             @include('components.install-modal')
 

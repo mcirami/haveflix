@@ -72,7 +72,7 @@ class AuthController extends BaseController
     public function login(Request $request): JsonResponse
     {
 
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        if(Auth::attempt(['username' => $request->user_name, 'email' => $request->email, 'password' => $request->password])){
             $user = Auth::user();
             $success['token'] =  $user->createToken('HaveFlix')->plainTextToken;
             $success['username'] =  $user->username;

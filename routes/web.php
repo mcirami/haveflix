@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Auth\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,11 +16,10 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controller::class, 'homePage'])->name('home');
 
 Route::get('/dashboard', [Controller::class, 'showDashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('verify-login/{token}', [AuthController::class, 'verifyLogin'])->name('verify-login');
 
 Route::get('/offline', function () {
     return view('modules/laravelpwa/offline');

@@ -1,4 +1,12 @@
-<x-app-layout>
+@php
+
+    if(!isset($apiErrors)) {
+        $apiErrors = null;
+    }
+
+@endphp
+
+<x-app-layout :apiErrors="$apiErrors">
 
     <x-slot name="header">
         <!-- header -->

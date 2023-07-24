@@ -46,6 +46,14 @@ form:not(.logout) {
         padding-left: 0;
     }
 
+    .api_error {
+        width: 100%;
+        display: block;
+        color: red;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
     input[type=checkbox] {
         height: auto;
         width: auto;

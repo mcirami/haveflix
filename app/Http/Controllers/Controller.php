@@ -14,4 +14,8 @@ class Controller extends BaseController
 
         return view('dashboard');
     }
+
+    public function homePage() {
+        return view('welcome');
+    }
 }

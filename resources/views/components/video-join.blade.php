@@ -1,3 +1,6 @@
+@php
+    $apiErrors = session()->get("apiErrors");
+@endphp
 <div id="popup">
     <div class="close_div">
         <a href="#">
@@ -55,13 +58,20 @@
                         {{--<x-input-label for="name" :value="__('Name')" />--}}
                         <x-text-input placeholder="Username" id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
                         <x-input-error :messages="$errors->get('username')" />
+                        @isset($apiErrors['username'])
+                            <small class="api_error">{{$apiErrors['username'][0]}}</small>
+                        @endisset
+
                     </div>
 
                     <!-- Email Address -->
                     <div>
-                       {{-- <x-input-label for="email" :value="__('Email')" />--}}
+                        {{-- <x-input-label for="email" :value="__('Email')" />--}}
                         <x-text-input placeholder="Email Address" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
                         <x-input-error :messages="$errors->get('email')" />
+                        @isset($apiErrors['email'])
+                            <small class="api_error">{{$apiErrors['email'][0]}}</small>
+                        @endisset
                     </div>
 
                     <!-- Password -->
