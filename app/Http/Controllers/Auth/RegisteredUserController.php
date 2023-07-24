@@ -62,11 +62,11 @@ class RegisteredUserController extends Controller
             'expires_at' => now()->addMinutes(15),
         ]);
 
-        $url =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
+        $loginUrl =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
 
-        Log::channel( 'api' )->info("login url: " . $url);
+        Log::channel( 'api' )->info("login url: " . $loginUrl);
 
-        $apiServices->postToBBR($user, $url);
+        $apiServices->postToBBR($user, $loginUrl);
 
         //Cookie::queue(Cookie::forget('regFormSubmit'));
 

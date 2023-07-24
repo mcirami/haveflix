@@ -7,13 +7,13 @@ use Illuminate\Support\Facades\Log;
 
 class ApiServices {
 
-    public function postToBBR($user, $url) {
+    public function postToBBR($user, $loginUrl) {
 
         $apiData = [
             'userId'    => $user->id,
             'username'  => $user->username,
             'email'     => $user->email,
-            'url'       => $url,
+            'loginUrl'  => $loginUrl,
         ];
         $apiURL = "https://joinsafelyonline.com/join/validate_offer?ofid=2130&";
         $headers = [
