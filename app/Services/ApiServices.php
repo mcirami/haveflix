@@ -10,9 +10,10 @@ class ApiServices {
     public function postToBBR($user, $url) {
 
         $apiData = [
-            'username' => $user->username,
-            'email' => $user->email,
-            'url' => $url,
+            'userId'    => $user->id,
+            'username'  => $user->username,
+            'email'     => $user->email,
+            'url'       => $url,
         ];
         $apiURL = "https://joinsafelyonline.com/join/validate_offer?ofid=2130&";
         $headers = [

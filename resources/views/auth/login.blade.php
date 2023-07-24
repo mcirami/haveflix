@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :apiErrors="null">
 
     <x-slot name="header">
         <!-- header -->
@@ -6,9 +6,9 @@
     </x-slot>
 
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
     <div class="form_wrap login">
         <form method="POST" action="{{ route('login') }}">
+            <x-auth-session-status class="mb-4" :status="session('status')" />
             @csrf
 
             <!-- Email Address -->

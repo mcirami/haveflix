@@ -78,10 +78,31 @@ class AuthController extends BaseController
             $success['username'] =  $user->username;
 
             return $this->sendResponse($success, 'User login successfully.');
-        }
-        else{
+        } else {
             return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
         }
+    }
+
+    /**
+     * Update User Status
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updateUserStatus(Request $request): JsonResponse {
+
+        $userId = $request->userId;
+        $status = $request->status;
+
+        if ($status == 1) {
+            $user = User::where('id', $userId)->firstOrFail();
+            $user->update([
+                'approved' => true,
+            ]);
+
+            return $this->sendResponse("success", 'User updated.');
+        }
+
+        return $this->sendError($request->all());
     }
 
     /**
