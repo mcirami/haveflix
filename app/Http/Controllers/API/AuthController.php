@@ -96,7 +96,19 @@ class AuthController extends BaseController
         $userId = $request->userId;
         $status = $request->status;
 
-        $user = User::where('id', $userId)->firstOrFail();
+        if (!isset($request->userId)) {
+            return $this->sendResponse("User ID missing:", "user is a required parameter");
+        }
+
+        if (!isset($request->status)) {
+            return $this->sendResponse("Status missing:", "Status is a required parameter");
+        }
+
+        $user = User::where('id', $userId)->first();
+
+        if (!$user) {
+            return $this->sendResponse("User not found:", "There is no user with this ID");
+        }
 
         $user->update([
             'status' => $status,
