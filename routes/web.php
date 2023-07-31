@@ -22,7 +22,7 @@ Route::get('/dashboard', [Controller::class, 'showDashboard'])->middleware(['aut
 Route::get('verify-login/{token}', [AuthController::class, 'verifyLogin'])->name('verify-login');
 
 Route::get('/offline', function () {
-    return view('modules/laravelpwa/offline');
+    return view('vendor/laravelpwa/offline');
 });
 
 Route::post('/custom-register', [RegisteredUserController::class, 'store'])->name('custom.register');
