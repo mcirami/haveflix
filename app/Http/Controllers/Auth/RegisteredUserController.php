@@ -56,19 +56,15 @@ class RegisteredUserController extends Controller
 
         //Auth::login($user);
 
-        $plaintext = Str::random(32);
-        $token = $user->loginTokens()->create([
-            'token' => hash('sha256', $plaintext),
-            'expires_at' => now()->addMinutes(15),
-        ]);
+        //$apiServices->postToBBR($user);
 
-        $loginUrl =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
+        //TODO: Show Credit Card Form, send these values
+        // &x_userId=$user->id
+        // &username=$user->username
+        // &password=$request->password
+        // &email=$user->email
 
-        Log::channel( 'api' )->info("login url: " . $loginUrl);
-
-        $apiServices->postToBBR($user, $loginUrl);
-
-        //Cookie::queue(Cookie::forget('regFormSubmit'));
+        Cookie::queue(Cookie::forget('regFormSubmit'));
 
         //return redirect(RouteServiceProvider::HOME);
     }

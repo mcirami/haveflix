@@ -8,7 +8,10 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class AuthController extends BaseController
 {
@@ -93,25 +96,25 @@ class AuthController extends BaseController
         $userId = $request->userId;
         $status = $request->status;
 
-        if ($status == 1) {
-            $user = User::where('id', $userId)->firstOrFail();
-            $user->update([
-                'approved' => true,
-            ]);
+        $user = User::where('id', $userId)->firstOrFail();
 
-            return $this->sendResponse("success", 'User updated.');
-        }
+        $user->update([
+            'status' => $status,
+        ]);
 
-        if ($status == 0) {
-            $user = User::where('id', $userId)->firstOrFail();
-            $user->update([
-                'approved' => false,
-            ]);
+        $plaintext = Str::random(32);
+        $token = $user->loginTokens()->create([
+            'token' => hash('sha256', $plaintext),
+            'expires_at' => now()->addMinutes(15),
+        ]);
 
-            return $this->sendResponse("success", 'User updated.');
-        }
+        $loginUrl =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
 
-        return $this->sendError($request->all());
+        Log::channel( 'api' )->info("login url: " . $loginUrl);
+
+        return $this->sendResponse("loginUrl", $loginUrl);
+
+        //return $this->sendError($request->all());
     }
 
     /**
