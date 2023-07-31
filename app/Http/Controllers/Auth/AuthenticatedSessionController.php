@@ -55,7 +55,7 @@ class AuthenticatedSessionController extends Controller
             $user = User::where('email', $allRequests["email"])->first();
         }
 
-        if (!$user->status == "A") {
+        if ($user && !$user->status == "A") {
             return abort(401);
         }
 
