@@ -78,12 +78,17 @@ jQuery(document).ready(function($) {
         $('.btn-close').trigger('click');
     });
 
-    const formCookie = getCookie("regFormSubmit");
+    //const formCookie = getCookie("popupPage");
+    const formSession = window.popupPage;
 
-    if(formCookie) {
+    if(formSession === "register") {
         document.querySelector('#popup').classList.add("open");
         document.querySelector('#popup .content .text_wrap:first-child').classList.add('hidden');
-        document.querySelector('#popup .content .text_wrap:last-child').classList.remove('hidden');
+        document.querySelector('#popup .content .text_wrap#register').classList.remove('hidden');
+    } else if(formSession === "credit") {
+        document.querySelector('#popup').classList.add("open");
+        document.querySelector('#popup .content .text_wrap:first-child').classList.add('hidden');
+        document.querySelector('#popup .content .text_wrap#credit').classList.remove('hidden');
     }
 
     document.querySelectorAll('.popup').forEach(div => div.addEventListener('click', (e) => {
@@ -201,7 +206,7 @@ jQuery(document).ready(function($) {
         installDialog.setAttribute("hidden", "");
     })
 
-    function getCookie(cName) {
+    /*function getCookie(cName) {
         const name = cName + "=";
         const cDecoded = decodeURIComponent(document.cookie); //to be careful
         const cArr = cDecoded.split('; ');
@@ -210,5 +215,5 @@ jQuery(document).ready(function($) {
             if (val.indexOf(name) === 0) res = val.substring(name.length);
         })
         return res
-    }
+    }*/
 });

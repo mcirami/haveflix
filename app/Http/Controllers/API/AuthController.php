@@ -8,7 +8,9 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -122,6 +124,7 @@ class AuthController extends BaseController
 
         $loginUrl =  URL::temporarySignedRoute('verify-login', $token->expires_at, [ 'token' => $plaintext]);
 
+        //Cookie::queue(Cookie::forget('popupPage'));
         Log::channel( 'api' )->info("login url: " . $loginUrl);
 
         return $this->sendResponse("loginUrl", $loginUrl);

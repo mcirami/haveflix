@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
@@ -33,8 +34,9 @@ class RegisteredUserController extends Controller
     public function store(Request $request, ApiServices $apiServices)
     {
 
-        Cookie::queue(Cookie::make('regFormSubmit', 'true', 30, null, null, null, false));
-
+        //Cookie::queue(Cookie::make('popupPage', 'register', 30, null, null, null, false));
+        Session::put('popupPage', 'register');
+        Session::save();
         /*$apiErrors = ["status" => 0, "errors" => ["username" => ["That Username Is Not Available"],"email" => ["That Email Is Already In Use"]]];
 
         session()->put('_old_input', ['username' => $user->username, 'email' => $user->email]);
@@ -43,7 +45,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'username' => ['required', 'string', 'min:4','max:255', 'unique:'.User::class],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', 'min:6', Rules\Password::defaults()],
+            'password' => ['required', 'confirmed', 'min:6'],
         ]);
 
         $user = User::create([
@@ -54,17 +56,22 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+        //Cookie::queue(Cookie::make('popupPage', 'credit', 30, null, null, null, false));
+        Session::put('popupPage', 'credit');
+        Session::put('userInfo', [
+            'userId' => $user->id,
+            'username' => $user->username,
+            'password' => $request->password,
+            'email' => $user->email
+        ]);
+        Session::save();
         //Auth::login($user);
 
         //$apiServices->postToBBR($user);
 
-        //TODO: Show Credit Card Form, send these values
-        // &x_userId=$user->id
-        // &username=$user->username
-        // &password=$request->password
-        // &email=$user->email
+        return redirect('/');
 
-        Cookie::queue(Cookie::forget('regFormSubmit'));
+        //Cookie::queue(Cookie::forget('popupPage'));
 
         //return redirect(RouteServiceProvider::HOME);
     }

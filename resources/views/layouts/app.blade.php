@@ -41,10 +41,13 @@
             });
         </script>
     </head>
+    <script>
+        window.popupPage = "{{Session::get('popupPage')}}";
+    </script>
     <body class="font-sans antialiased">
         <div class="min-h-screen">
             {{--@include('components.video-join-modal')--}}
-            <x-video-join :apiErrors="$apiErrors" />
+            <x-video-join :apiErrors="$apiErrors" :userInfo="$userInfo" />
             @include('components.onesignal-modal')
             @include('components.install-modal')
 

@@ -361,12 +361,6 @@ a.button-s{font-size: 17px;color: #ff0000;@include proxima;}
     @include proxima;
 }
 
-.close_div {
-    position: absolute;
-    top: 40px;
-    right: 40px;
-}
-
 #push-dialog, #install-dialog {
     width: 100%;
     position: fixed;
