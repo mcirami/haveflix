@@ -103,6 +103,10 @@ jQuery(document).ready(function($) {
     document.querySelector('#close_icon').addEventListener("click", (e) => {
         e.preventDefault();
         document.querySelector('#popup').classList.remove("open");
+        const videoPlayer = document.querySelector('#video_player');
+        if(videoPlayer) {
+            videoPlayer.src = "";
+        }
     })
 
     document.querySelectorAll('.next_page').forEach(div => div.addEventListener('click', (e) => {
