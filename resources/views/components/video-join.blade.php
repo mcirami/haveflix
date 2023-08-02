@@ -122,15 +122,15 @@
                     <iframe src="{{$url}}"></iframe>
                 @endisset
             </div>
-@endguest
-@auth
-<div class="video_wrapper">
-<video class="z-1" controls id="video_player">
-    <source src="" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-{{--<iframe class="z-1" id="video_player" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>--}}
-</div>
-@endauth
-</div>
+        @endguest
+        @auth
+            <div class="video_wrapper">
+            {{--<video class="z-1" controls id="video_player">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>--}}
+            <iframe class="z-1" id="video_player" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+            </div>
+        @endauth
+    </div>
 </div>
