@@ -74,6 +74,12 @@
             width: 100%;
         }
 
+        .video_wrapper {
+            iframe {
+                height: 100%;
+            }
+        }
+
         .text_wrap {
             z-index: 1;
             transition: opacity 500ms linear;

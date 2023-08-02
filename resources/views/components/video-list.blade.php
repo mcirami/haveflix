@@ -1,5 +1,7 @@
 <div>
-    @php //dd($videoList) @endphp
+    @php //dd($videoList)
+        $authUser = \Illuminate\Support\Facades\Auth::user();
+    @endphp
 
     <section class="spot-section first-spot-sec">
         <div class="section-spotlite">
@@ -24,19 +26,21 @@
         @php $count = 0 @endphp
         @foreach($videoList['FeaturedFlix']['videos'] as $value)
             @php ++$count @endphp
-            <div class="main-sli">
-                <div class="sli-div">
-                    <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
-                        <img src="{{ asset('images/' . $videoList['FeaturedFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
-                        <div class="play-icon">
-                            <img src="{{ asset('images/play-button.png') }}" alt="play-button">
-                        </div>
-                    </a>
+            @if (($value['page'] == 'member' && $authUser) || $value['page'] == 'all')
+                <div class="main-sli">
+                    <div class="sli-div">
+                        <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
+                            <img src="{{ asset('images/' . $videoList['FeaturedFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
+                            <div class="play-icon">
+                                <img src="{{ asset('images/play-button.png') }}" alt="play-button">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-title">
+                        <h6>{{$value['name']}}</h6>
+                    </div>
                 </div>
-                <div class="movie-title">
-                    <h6>{{$value['name']}}</h6>
-                </div>
-            </div>
+            @endif
         @endforeach
     </section>
 
@@ -92,19 +96,21 @@
         @php $count = 0 @endphp
         @foreach($videoList['TeenFlix']['videos'] as $value)
             @php ++$count @endphp
-            <div class="main-sli">
-                <div class="sli-div">
-                    <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
-                        <img src="{{ asset('images/' . $videoList['TeenFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
-                        <div class="play-icon">
-                            <img src="{{ asset('images/play-button.png') }}" alt="play-button">
-                        </div>
-                    </a>
+            @if (($value['page'] == 'member' && $authUser) || $value['page'] == 'all')
+                <div class="main-sli">
+                    <div class="sli-div">
+                        <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
+                            <img src="{{ asset('images/' . $videoList['TeenFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
+                            <div class="play-icon">
+                                <img src="{{ asset('images/play-button.png') }}" alt="play-button">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-title">
+                        <h6>{{$value['name']}}</h6>
+                    </div>
                 </div>
-                <div class="movie-title">
-                    <h6>{{$value['name']}}</h6>
-                </div>
-            </div>
+            @endif
         @endforeach
     </section>
 
@@ -131,19 +137,21 @@
         @php $count = 0 @endphp
         @foreach($videoList['GroupFlix']['videos'] as $value)
             @php ++$count @endphp
-            <div class="main-sli">
-                <div class="sli-div">
-                    <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
-                        <img src="{{ asset('images/' . $videoList['GroupFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
-                        <div class="play-icon">
-                            <img src="{{ asset('images/play-button.png') }}" alt="play-button">
-                        </div>
-                    </a>
+            @if (($value['page'] == 'member' && $authUser) || $value['page'] == 'all')
+                <div class="main-sli">
+                    <div class="sli-div">
+                        <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
+                            <img src="{{ asset('images/' . $videoList['GroupFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
+                            <div class="play-icon">
+                                <img src="{{ asset('images/play-button.png') }}" alt="play-button">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-title">
+                        <h6>{{$value['name']}}</h6>
+                    </div>
                 </div>
-                <div class="movie-title">
-                    <h6>{{$value['name']}}</h6>
-                </div>
-            </div>
+            @endif
         @endforeach
     </section>
 
@@ -170,19 +178,21 @@
         @php $count = 0 @endphp
         @foreach($videoList['AnalFlix']['videos'] as $value)
             @php ++$count @endphp
-            <div class="main-sli">
-                <div class="sli-div">
-                    <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
-                        <img src="{{ asset('images/' . $videoList['AnalFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
-                        <div class="play-icon">
-                            <img src="{{ asset('images/play-button.png') }}" alt="play-button">
-                        </div>
-                    </a>
+            @if (($value['page'] == 'member' && $authUser) || $value['page'] == 'all')
+                <div class="main-sli">
+                    <div class="sli-div">
+                        <a href="#" class="popup" @auth data-video="{{ $value['video_url'] }}" @endauth>
+                            <img src="{{ asset('images/' . $videoList['AnalFlix']['image_directory'] . $count . '.jpg') }}" alt="slider-image">
+                            <div class="play-icon">
+                                <img src="{{ asset('images/play-button.png') }}" alt="play-button">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="movie-title">
+                        <h6>{{$value['name']}}</h6>
+                    </div>
                 </div>
-                <div class="movie-title">
-                    <h6>{{$value['name']}}</h6>
-                </div>
-            </div>
+            @endif
         @endforeach
     </section>
 </div>
