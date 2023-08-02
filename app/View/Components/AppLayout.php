@@ -8,11 +8,9 @@ use Illuminate\View\View;
 class AppLayout extends Component
 {
     public $apiErrors;
-    public $userInfo;
 
-    public function __construct($apiErrors, $userInfo) {
+    public function __construct($apiErrors) {
         $this->apiErrors    = $apiErrors;
-        $this->userInfo     = $userInfo;
     }
 
     /**

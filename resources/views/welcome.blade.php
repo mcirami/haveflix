@@ -10,7 +10,7 @@
 
 @endphp
 
-<x-app-layout :apiErrors="$apiErrors" :userInfo="$userInfo">
+<x-app-layout :apiErrors="$apiErrors">
 
     <x-slot name="header">
         <!-- header -->

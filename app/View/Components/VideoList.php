@@ -35,7 +35,7 @@ class VideoList extends Component
         $videoList['FeaturedFlix'] = array(
             'image_directory' => 'FeaturedFlix/ff',
             'videos' => array(
-                array('name' => 'SEXY SHOWER SLUT', 'video_url' => 'https://video-testing-bucket.s3.us-east-2.amazonaws.com/Phonic+Pressure+-+Breathe+(clip).mp4'),
+                array('name' => 'SEXY SHOWER SLUT', 'video_url' => 'http://cloudvod-test.rockphase.com/video/20230802/a80c00f220a44f3dbecb7aa19c76373d/cloudv-transfer/5555555516r1612q55564365rqn2r98o_b9277145038447a3b69cb68988bf1b4d_0_4.mp4'),
                 array('name' => 'MILF TAKES DEEP MEAT', 'video_url' => 'https://video-testing-bucket.s3.us-east-2.amazonaws.com/Phonic+Pressure+-+Breathe+(clip).mp4'),
                 array('name' => 'MASSAGE TURNS TO FUCKING', 'video_url' => 'https://video-testing-bucket.s3.us-east-2.amazonaws.com/Phonic+Pressure+-+Breathe+(clip).mp4'),
                 array('name' => 'SKYLAR\'S SUPER SUCK', 'video_url' => ''),
