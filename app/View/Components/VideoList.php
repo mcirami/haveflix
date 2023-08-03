@@ -35,7 +35,7 @@ class VideoList extends Component
         $videoList['FeaturedFlix'] = array(
             'image_directory' => 'FeaturedFlix/ff',
             'videos' => array(
-                array('page' => 'all', 'name' => 'SEXY SHOWER SLUT', 'video_url' => 'http://cloudv.cdnetworks.com/player/auto-play.action?videoId=bca2ba2b01891000e055188a00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'all', 'name' => 'SEXY SHOWER SLUT', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bca2ba2b01891000e055188a00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'MILF TAKES DEEP MEAT', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b33cfb6b01891000a4ee7a5e00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'MASSAGE TURNS TO FUCKING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b7f6afdb01891000167811ba00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'SKYLAR\'S SUPER SUCK', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b770b8d1018910004fc9849a00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
@@ -95,12 +95,12 @@ class VideoList extends Component
             'image_directory' => 'GroupFlix/gf',
             'videos' => array(
                 array('page' => 'all', 'name' => 'CLASSY FUCKERS 3 SOME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2d26a150189100031791f3f00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-                array('page' => 'all', 'name' => 'SEXY MILFIE 3 SOME SEX', 'video_url' => ''),
+                array('page' => 'all', 'name' => 'SEXY MILFIE 3 SOME SEX', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcf42d4f0189100088c658f700000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'DOUBLE COCK MILF DESTRUCTION', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2f2fd8901891000ba9bcfb400000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => '2 TEENS SHARE COCK', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2959b0201891000dc0275c700000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'LUST PARTY OF 3', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b32fef4e01891000d1a8140100000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => '3 SOME 6 HOLES FILLED', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b29d19b601891000b1cf228000000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-                array('page' => 'all', 'name' => 'DOUBLE BLOWJOB BEAUTIES', 'video_url' => 'http://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc356ba301891000f6f67d8700000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'all', 'name' => 'DOUBLE BLOWJOB BEAUTIES', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc356ba301891000f6f67d8700000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'SQUIRTING 3 SOME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcb88f2d01891000b74222b500000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'COUPLE SWAP 4 SOME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2e2c5770189100080edcf8800000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'DOUBLE BLOWJOB SANDWICH', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2ec569a0189100094c747b100000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
@@ -120,7 +120,7 @@ class VideoList extends Component
                 array('page' => 'all', 'name' => 'ANASTASIA DOES ANAL', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b7eeb1c50189100016c3a24b00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'RAW RAILING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc5793b001891000a49fc7e000000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'SKINNY SOLO ANAL BALLS', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcad4de501891000a223a39200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-                array('page' => 'all', 'name' => 'VOLUPTUOUS BLONDE TAKES CONTROL', 'video_url' => ''),
+                array('page' => 'all', 'name' => 'VOLUPTUOUS BLONDE TAKES CONTROL', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bceced1001891000c97628ef00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'ANASTASIA FUCKS HER ASS', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b7f39af401891000ebefd71200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
             )
         );

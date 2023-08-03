@@ -183,7 +183,7 @@ jQuery(document).ready(function($) {
         });
     }
 
-    let deferredPrompt = null;
+    /*let deferredPrompt = null;
     const installDialog = document.querySelector('#install-dialog');
     const installButton = document.querySelector('#push-install');
 
@@ -208,7 +208,7 @@ jQuery(document).ready(function($) {
         console.log(`Install prompt was: ${result.outcome}`);
         deferredPrompt = null;
         installDialog.setAttribute("hidden", "");
-    })
+    })*/
 
     /*function getCookie(cName) {
         const name = cName + "=";
