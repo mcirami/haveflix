@@ -57,6 +57,10 @@ class VideoList extends Component
                 array('page' => 'member', 'name' => 'BIRTHDAY POKING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2b81f9b018910000608083b00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'LESBIAN LOVERS', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2a35fa301891000fe4bb00c00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'STEP DAUGHTER AND FRIEND FUN', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2b2956001891000ab72056000000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'KYLA KEEPS BLOWING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd007e3501891000537283e300000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'SAMMI\'S SLOPPY SUCK', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd14a91901891000294f6fba00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'MAID SONIA MAKES CUM', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd05b2d6018910000e40b9da00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+
             )
         );
 
@@ -87,6 +91,7 @@ class VideoList extends Component
                 array('page' => 'all', 'name' => 'TASTY TEEN TOURIST', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcbdca6b01891000d48cea7000000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'BREAK DANCING PUSSY LICKING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2af6556018910001660bb0100000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'YOGA TEEN GETS FUCKED', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2a9a0670189100069b36dca00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'SONIA SAVORS SEMEN', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd07f79001891000779a192e00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
 
             )
         );
@@ -107,6 +112,9 @@ class VideoList extends Component
                 array('page' => 'all', 'name' => 'VICTORIA AND SHEA SHARE', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b7ea680801891000be32997900000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'all', 'name' => 'DOUBLE BLOWING DIVAS', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2e7af3d018910000cd885a600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'BBC ADVENTURES', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b197db4901891000fc53d5b600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'INDIGO DIGS DOGGY', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcfab1b101891000b95cbb6200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'VIBE BEGS FOR DOGGIE', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcfab1b101891000b95cbb6200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+
             )
         );
 
