@@ -116,8 +116,17 @@
             <div class="text_wrap hidden" id="credit">
                 @isset($data)
                     @php
-                        $url = "https://sociallogic2hf.joinsafelyonline.com/routes/sociallogic2hf/?ofid=2130&a_aid=sociallogic2hf&a_bid=6b305f15&j2pnc=1&email=" .
-                        $data["email"] . "&username=" . $data["username"] . "&password=" . $data["password"] . "&x_userId=" . $data["userId"];
+                        $x_r = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
+						$x_a = (isset($_GET["a"]) && $_GET["a"] != "") ? $_GET["a"] : "343";
+						$x_c = (isset($_GET["s"]) && $_GET["s"] != "") ? $_GET["s"] : "";
+
+                        $url = "https://sociallogic2hf.joinsafelyonline.com/routes/sociallogic2hf/?ofid=2130&a_aid=sociallogic2hf&a_bid=6b305f15&j2pnc=1&email=" . $data["email"] .
+                        "&username=" . $data["username"] .
+                        "&password=" . $data["password"] .
+                        "&x_userId=" . $data["userId"] .
+                        "&x_r=" . $x_r .
+                        "&x_a=" . $x_a .
+                        "&x_c=" . $x_c;
                     @endphp
                     <iframe src="{{$url}}"></iframe>
                 @endisset
@@ -125,7 +134,7 @@
         @endguest
         @auth
             <div class="video_wrapper">
-            {{--<video class="z-1" controls id="video_player">
+            {{--<video class="z-1" autoplay controls id="video_player" controlsList="nodownload">
                 <source src="" type="video/mp4">
                 Your browser does not support the video tag.
             </video>--}}

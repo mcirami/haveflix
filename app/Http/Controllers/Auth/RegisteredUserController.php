@@ -69,7 +69,7 @@ class RegisteredUserController extends Controller
 
         //$apiServices->postToBBR($user);
 
-        return redirect('/');
+        return redirect()->back();
 
         //Cookie::queue(Cookie::forget('popupPage'));
 

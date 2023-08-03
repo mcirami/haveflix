@@ -92,8 +92,8 @@
                     </div>
                 </div>
                 <div class="w-100 my-5 text-center">
-                    <h3 class="mb-4">There was an issue with the login link.</h3>
-                    <a class="button-sign" href="{{ Route('login') }}">Click Here To Login</a>
+                    <h3 class="mb-4">Page not found.</h3>
+                    <p>Please return to our <a class="button-sign" href={{ url('/') }}>homepage</a>.</p>
                 </div>
             </div>
         </div>
