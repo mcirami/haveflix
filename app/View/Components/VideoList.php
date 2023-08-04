@@ -60,7 +60,8 @@ class VideoList extends Component
                 array('page' => 'member', 'name' => 'KYLA KEEPS BLOWING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd007e3501891000537283e300000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'SAMMI\'S SLOPPY SUCK', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd14a91901891000294f6fba00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'MAID SONIA MAKES CUM', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd05b2d6018910000e40b9da00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-
+                array('page' => 'member', 'name' => 'PUSSY LICKING LESBIANS', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc51134801891000d17bdb4f00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'ROCKN LUNCH TIME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc97206501891000b134d1ca00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
             )
         );
 
@@ -92,7 +93,10 @@ class VideoList extends Component
                 array('page' => 'member', 'name' => 'BREAK DANCING PUSSY LICKING', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2af6556018910001660bb0100000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'YOGA TEEN GETS FUCKED', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2a9a0670189100069b36dca00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'SONIA SAVORS SEMEN', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bd07f79001891000779a192e00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-
+                array('page' => 'member', 'name' => 'TINY TEENS FIRST TIME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bce767e401891000c05618c600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'TEMPTING TEEN TAKES ABUSE', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bce1c26001891000ccc9cc5600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'MADISON MOUTHS BALLS DEEP', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=c0f8bbe6018910000fbaa95300000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'TEEN SOCCER SLUTS FUCK', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcda0e3d018910007ba60edf00000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
             )
         );
 
@@ -114,7 +118,8 @@ class VideoList extends Component
                 array('page' => 'member', 'name' => 'BBC ADVENTURES', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b197db4901891000fc53d5b600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'INDIGO DIGS DOGGY', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcfab1b101891000b95cbb6200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
                 array('page' => 'member', 'name' => 'VIBE BEGS FOR DOGGIE', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bcfab1b101891000b95cbb6200000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
-
+                array('page' => 'member', 'name' => 'REDHEAD AND EBONY 3 SOME', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=bc5c241e0189100080478a3700000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
+                array('page' => 'member', 'name' => 'DOUBLE DICKED DIVA', 'video_url' => 'https://cloudv.cdnetworks.com/player/auto-play.action?videoId=b2f9d02501891000de9ad43600000000&userId=A059B4798FBBB37FCA24595540D5673DF7E95F00D50FFE91&playerType=11&language=2'),
             )
         );
 

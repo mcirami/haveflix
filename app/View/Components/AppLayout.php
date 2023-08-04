@@ -9,7 +9,7 @@ class AppLayout extends Component
 {
     public $apiErrors;
 
-    public function __construct($apiErrors) {
+    public function __construct($apiErrors = null) {
         $this->apiErrors    = $apiErrors;
     }
 

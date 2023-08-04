@@ -34,13 +34,8 @@ class RegisteredUserController extends Controller
     public function store(Request $request, ApiServices $apiServices)
     {
 
-        //Cookie::queue(Cookie::make('popupPage', 'register', 30, null, null, null, false));
         Session::put('popupPage', 'register');
         Session::save();
-        /*$apiErrors = ["status" => 0, "errors" => ["username" => ["That Username Is Not Available"],"email" => ["That Email Is Already In Use"]]];
-
-        session()->put('_old_input', ['username' => $user->username, 'email' => $user->email]);
-        return redirect('/')->with(["apiErrors" => $apiErrors['errors']]);*/
 
         $request->validate([
             'username' => ['required', 'string', 'min:4','max:255', 'unique:'.User::class],
@@ -56,7 +51,6 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        //Cookie::queue(Cookie::make('popupPage', 'credit', 30, null, null, null, false));
         Session::put('popupPage', 'credit');
         Session::put('userInfo', [
             'userId' => $user->id,
@@ -65,14 +59,10 @@ class RegisteredUserController extends Controller
             'email' => $user->email
         ]);
         Session::save();
-        //Auth::login($user);
 
-        //$apiServices->postToBBR($user);
+        $trackingId = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
+        $apiServices->postToRockPhase($user->email, $request->ip(), $trackingId);
 
         return redirect()->back();
-
-        //Cookie::queue(Cookie::forget('popupPage'));
-
-        //return redirect(RouteServiceProvider::HOME);
     }
 }

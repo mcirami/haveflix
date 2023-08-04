@@ -14,7 +14,7 @@ class VideoJoin extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($apiErrors)
+    public function __construct($apiErrors = null)
     {
         $this->apiErrors    = $apiErrors;
     }
