@@ -47,7 +47,7 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen">
 
-            <x-video-join :apiErrors="$apiErrors"/>
+            <x-video-join/>
             @include('components.onesignal-modal')
 
             <!-- Page Heading -->

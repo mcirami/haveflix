@@ -29,8 +29,6 @@ class ApiServices {
             return redirect('/')->with(['apiErrors' => $responseBody["errors"]]);
         }
 
-        Cookie::queue(Cookie::forget('regFormSubmit'));
-
         return 0;
 
     }

@@ -6,13 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\URL;
-use Illuminate\Support\Str;
-use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 use App\Services\ApiServices;
 
@@ -60,8 +55,7 @@ class RegisteredUserController extends Controller
         ]);
         Session::save();
 
-        $trackingId = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
-        $apiServices->postToRockPhase($user->email, $request->ip(), $trackingId);
+        $apiServices->postToRockPhase($user->email, $request->ip(), $request->trackingId);
 
         return redirect()->back();
     }

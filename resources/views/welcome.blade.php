@@ -1,16 +1,4 @@
-@php
-
-    if(!isset($apiErrors)) {
-        $apiErrors = null;
-    }
-
-	if(!isset($userInfo)) {
-        $userInfo = null;
-    }
-
-@endphp
-
-<x-app-layout :apiErrors="$apiErrors">
+<x-app-layout>
 
     <x-slot name="header">
         <!-- header -->

@@ -9,14 +9,12 @@ use Illuminate\View\Component;
 class VideoJoin extends Component
 {
 
-    public $apiErrors;
-
     /**
      * Create a new component instance.
      */
-    public function __construct($apiErrors = null)
+    public function __construct()
     {
-        $this->apiErrors    = $apiErrors;
+
     }
 
     /**

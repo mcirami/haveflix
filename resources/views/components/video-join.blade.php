@@ -1,7 +1,6 @@
 @php
-    $apiErrors  = session()->get("apiErrors");
-	//$userInfoSession   = session()->get("userInfo");
 	$data = \Illuminate\Support\Facades\Session::get('userInfo');
+	$x_r = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
 @endphp
 
 <div id="popup">
@@ -56,15 +55,12 @@
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
+                    <input id="trackingId" type="hidden" name="trackingId" value="{{$x_r}}">
                     <!-- Name -->
                     <div>
                         {{--<x-input-label for="name" :value="__('Name')" />--}}
                         <x-text-input placeholder="Username" id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
                         <x-input-error :messages="$errors->get('username')" />
-                        @isset($apiErrors['username'])
-                            <small class="api_error">{{$apiErrors['username'][0]}}</small>
-                        @endisset
-
                     </div>
 
                     <!-- Email Address -->
@@ -72,9 +68,6 @@
                         {{-- <x-input-label for="email" :value="__('Email')" />--}}
                         <x-text-input placeholder="Email Address" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
                         <x-input-error :messages="$errors->get('email')" />
-                        @isset($apiErrors['email'])
-                            <small class="api_error">{{$apiErrors['email'][0]}}</small>
-                        @endisset
                     </div>
 
                     <!-- Password -->
@@ -116,7 +109,7 @@
             <div class="text_wrap hidden" id="credit">
                 @isset($data)
                     @php
-                        $x_r = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
+                        //$x_r = (isset($_GET["r"]) && $_GET["r"] != "") ? $_GET["r"] : "";
 						$x_a = (isset($_GET["a"]) && $_GET["a"] != "") ? $_GET["a"] : "343";
 						$x_c = (isset($_GET["s"]) && $_GET["s"] != "") ? $_GET["s"] : "";
 
