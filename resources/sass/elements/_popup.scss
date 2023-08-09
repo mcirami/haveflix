@@ -32,6 +32,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
+        z-index: 99;
 
         svg {
             @media screen and (max-width: 992px) {
@@ -70,8 +71,12 @@
         }
 
         iframe {
-            height: 640px;
+            height: 515px;
             width: 100%;
+
+            @media screen and (max-width: 550px) {
+                height: 600px;
+            }
         }
 
         .video_wrapper {

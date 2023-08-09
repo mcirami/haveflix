@@ -113,7 +113,7 @@
 						$x_a = (isset($_GET["a"]) && $_GET["a"] != "") ? $_GET["a"] : "343";
 						$x_c = (isset($_GET["s"]) && $_GET["s"] != "") ? $_GET["s"] : "";
 
-                        $url = "https://sociallogic2hf.joinsafelyonline.com/routes/sociallogic2hf/?ofid=2130&a_aid=sociallogic2hf&a_bid=6b305f15&j2pnc=1&email=" . $data["email"] .
+                        $url = "https://sociallogic2hf.joinsafelyonline.com/routes/sociallogic2hf/?ofid=2130&a_aid=sociallogic2hf&a_bid=6b305f15&j2pnc=1&cts=02&email=" . $data["email"] .
                         "&username=" . $data["username"] .
                         "&password=" . $data["password"] .
                         "&x_userId=" . $data["userId"] .
